@@ -20,6 +20,11 @@ body {
   transition: 0.3s ease-in-out;
 }
 
+.hero-summary{
+  color: white;
+  font-style: italic;
+}
+
 .black-icon {
   color: black !important; /* Use !important to override Bootstrap defaults */
 }
