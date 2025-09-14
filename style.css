@@ -655,6 +655,7 @@ body {
 /* ... (Keep all existing CSS above this point) ... */
 
 /* Work Experience Section Styles */
+/* Work Experience - paste into your style.css */
 #work-experience-section {
   padding: 80px 0;
 }
@@ -667,42 +668,42 @@ body {
   margin-bottom: 40px;
 }
 
-/* Style each work card to be a full-width stacked card with dark translucent background and white content */
+/* Card look & typography */
 .work-card {
-  background-color: rgba(0, 0, 0, 0.88);
+  background-color: rgba(0,0,0,0.88);
   border-radius: 12px;
   padding: 30px 36px;
-  color: #ffffff;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.65);
+  color: #fff;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.65);
   margin-bottom: 36px;
   border: none;
 }
 
 .work-card .card-title {
-  color: rgb(3, 74, 255); /* Bright blue title to match reference */
+  color: rgb(3,74,255); /* bright blue title */
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 8px;
 }
 
 .work-card .card-subtitle {
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255,255,255,0.85);
   font-weight: 600;
   margin-bottom: 8px;
 }
 
-.work-card p.text-muted,
-.work-card p {
-  color: rgba(255, 255, 255, 0.65);
+.work-card p,
+.work-card p.text-muted {
+  color: rgba(255,255,255,0.65);
   line-height: 1.6;
 }
 
 .work-card ul {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255,255,255,0.9);
   margin-top: 12px;
 }
 
-/* Force the Bootstrap columns inside work experience to stack vertically (one below the other) on all screen sizes to match requested design */
+/* Force every column to be full width and stack vertically (one card per row) */
 #work-experience-section .row.g-4 {
   display: flex;
   flex-direction: column !important;
@@ -715,14 +716,10 @@ body {
   flex: 0 0 100% !important;
 }
 
+/* Small-screen tweak */
 @media (max-width: 768px) {
-  #work-experience-section {
-    padding: 60px 0;
-  }
-  .work-card {
-    padding: 24px;
-    margin-bottom: 20px;
-  }
+  #work-experience-section { padding: 60px 0; }
+  .work-card { padding: 24px; margin-bottom: 20px; }
 }
 
 /* Featured Projects Section */
