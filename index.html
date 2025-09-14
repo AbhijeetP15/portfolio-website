@@ -54,7 +54,7 @@
     </nav>
 
     <!-- Hero Section (now Home) -->
-    <section id="home-section">
+    <section id="home-section" class="py-5">
       <div class="container text-center">
         <!-- Circular Headshot -->
         <img src="./assets/abhilinkedin.jpeg" alt="Your Name" class="hero-img" />
@@ -64,6 +64,11 @@
 
         <!-- Tagline -->
         <p class="hero-tagline fade-in">AI🤖 & Data-Science📊 Enthusiast | Full-Stack Developer🚀</p>
+
+        <!-- 2-3 line summary to impress recruiters -->
+        <p class="hero-summary mt-3">
+          I love solving challenging problems and turning data into actionable solutions. I'm deeply passionate about AI/ML and enjoy building intelligent systems that scale. I'm eager to contribute to teams that value impact, clean engineering, and continuous learning.
+        </p>
       </div>
     </section>
 
@@ -73,67 +78,75 @@
         <h2 class="text-center mb-4">Skills</h2>
 
         <div class="row row-cols-1 row-cols-md-3 g-4">
+          <!-- Programming Languages -->
           <div class="col">
             <div class="card h-100 text-center skill-card goofy-bounce" style="animation-delay: 0.2s;">
               <div class="card-body">
+                <!-- changed icon for Programming Languages -->
                 <i class="bi bi-code-slash fs-1 text-primary mb-3"></i>
-                <h5 class="card-title">Full-Stack Development</h5>
-                <p class="card-text">HTML, CSS, Bootstrap, JavaScript, Node.js, and React.</p>
+                <h5 class="card-title">Programming Languages</h5>
+                <p class="card-text">Java, Python, C++, JavaScript, HTML/CSS, SQL, R</p>
               </div>
             </div>
           </div>
 
+          <!-- Frameworks (was Data Science & Databases) -->
           <div class="col">
             <div class="card h-100 text-center skill-card goofy-bounce" style="animation-delay: 0.4s;">
               <div class="card-body">
                 <i class="bi bi-database-fill-gear fs-1 text-primary mb-3"></i>
-                <h5 class="card-title">Data Science & Databases</h5>
-                <p class="card-text">Pandas, Tableau, MySQL, PostgreSQL, Firebase (NoSQL), Data Analytics</p>
+                <h5 class="card-title">Frameworks</h5>
+                <p class="card-text">React.js, Next.js, Express.js, Spring Boot, FastAPI, Flask</p>
               </div>
             </div>
           </div>
 
+          <!-- AI & Machine Learning Libraries -->
           <div class="col">
             <div class="card h-100 text-center skill-card goofy-bounce" style="animation-delay: 0.6s;">
               <div class="card-body">
                 <i class="bi bi-robot fs-1 text-primary mb-3"></i>
-                <h5 class="card-title">AI & Machine Learning</h5>
-                <p class="card-text">Experience with Python, TensorFlow, and building predictive models.</p>
+                <h5 class="card-title">AI / ML Libraries</h5>
+                <p class="card-text">NumPy, Pandas, scikit-learn, TensorFlow, PyTorch, XGBoost, Decision Trees</p>
               </div>
             </div>
           </div>
 
+          <!-- Cloud & DevOps Tools (was Cloud) -->
           <div class="col">
             <div class="card h-100 text-center skill-card goofy-bounce" style="animation-delay: 0.8s;">
               <div class="card-body">
                 <i class="bi bi-cloud fs-1 text-primary mb-3"></i>
-                <h5 class="card-title">Cloud</h5>
-                <p class="card-text">AWS, Azure, DevOps, Data Management & Analytics in Cloud</p>
+                <h5 class="card-title">Cloud & DevOps Tools</h5>
+                <p class="card-text">AWS (EC2, Lambda, S3, RDS, DynamoDB, VPC), Docker, Kubernetes, CI/CD, GitHub</p>
               </div>
             </div>
           </div>
 
+          <!-- Data Visualization & Databases (was Frameworks) -->
           <div class="col">
             <div class="card h-100 text-center skill-card goofy-bounce" style="animation-delay: 1.0s;">
               <div class="card-body">
                 <i class="bi bi-boxes fs-1 text-primary mb-3"></i>
-                <h5 class="card-title">Frameworks</h5>
-                <p class="card-text">Bootstrap, React, Node.js, Ruby on Rails, Flask, FastAPI</p>
+                <h5 class="card-title">Data Visualization & Databases</h5>
+                <p class="card-text">matplotlib, Seaborn, MongoDB (NoSQL), PostgreSQL</p>
               </div>
             </div>
           </div>
 
+          <!-- Coursework -->
           <div class="col">
             <div class="card h-100 text-center skill-card goofy-bounce" style="animation-delay: 1.2s;">
               <div class="card-body">
                 <i class="bi bi-book fs-1 text-primary mb-3"></i>
                 <h5 class="card-title">Coursework</h5>
-                <p class="card-text">OOP, DSA, OS, DBMS, WebDev, Cyber Security</p>
+                <p class="card-text">OOP, DSA, OS, DBMS, Machine Learning, Probability & Statistics</p>
               </div>
             </div>
           </div>
         </div>
 
+        <!-- Tech icons (kept as before) -->
         <div class="tech-icons-container mt-5">
           <div class="tech-icons-scroll">
             <img src="./assets/html-5_5968267.png" alt="HTML" class="tech-icon" />
@@ -152,7 +165,7 @@
             <img src="./assets/visual-studio_906324.png" alt="VScode" class="tech-icon" />
             <img src="https://devicon-website.vercel.app/api/amazonwebservices/original.svg" alt="AWS" class="tech-icon" />
             <img src="https://devicon-website.vercel.app/api/bootstrap/original.svg" alt="Bootstrap" class="tech-icon" />
-            <!-- Duplicate icons intentionally kept if you rely on the scrolling effect -->
+            <!-- duplicates for scrolling -->
             <img src="./assets/html-5_5968267.png" alt="HTML" class="tech-icon" />
             <img src="./assets/css-3_732190.png" alt="CSS" class="tech-icon" />
             <img src="./assets/js_5968292.png" alt="JavaScript" class="tech-icon" />
