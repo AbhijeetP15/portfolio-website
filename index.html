@@ -4,388 +4,310 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="milestone" content="Portfolio" />
-    <!-- TODO: Replace this with your title -->
     <title>Abhijeet Reddy Pailla Portfolio</title>
-    <!-- 
-			TODO: Add Bootstrap CSS link tag from: 
-      https://getbootstrap.com/
-		-->
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <!-- 
-			TODO: Add Bootstrap Icons link tag from: 
-			https://icons.getbootstrap.com/
-			(Remember, the CDN link is towards the bottom of the page!)
-		-->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
-    <!-- Custom styles (these can extend the default Bootstrap styles) -->
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
 
   <body>
-    <!-- TODO: Paste Navbar code and customize links -->
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
       <div class="container-fluid">
-          <!-- Navbar Brand with Home Icon -->
-          <a class="navbar-brand" href="#">
-              <i class="bi bi-house-door-fill black-icon"></i>
-          </a>
-  
-          <!-- Hamburger Button -->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-  
-          <!-- Collapsible Navbar Links -->
-          <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                  <a class="nav-link" href="#mission-section">Mission</a>
-              </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#skills-section">Skills</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#projects-section">Projects</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link active" href="#contact-section">Contact</a>
-                  </li>
-              </ul>
-          </div>
+        <!-- Navbar Brand with Home Icon -->
+        <a class="navbar-brand" href="#home-section">
+          <i class="bi bi-house-door-fill black-icon"></i>
+        </a>
+
+        <!-- Hamburger Button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#home-section">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills-section">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects-section">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#contact-section">Contact</a>
+            </li>
+          </ul>
+        </div>
       </div>
-  </nav>
-  
-  <!-- Bootstrap JavaScript -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  
-  </body>
+    </nav>
 
-    <!-- Hero section -->
+    <!-- Hero Section (now Home) -->
+    <section id="home-section">
+      <div class="container text-center">
+        <!-- Circular Headshot -->
+        <img src="./assets/abhilinkedin.jpeg" alt="Your Name" class="hero-img" />
 
-    <!-- Hero Section -->
-<section id="hero-section">
-  <div class="container text-center">
-      <!-- Circular Headshot -->
-      <img src="./assets/abhilinkedin.jpeg" alt="Your Name" class="hero-img">
-      
-      <!-- Name -->
-      <h1 class="hero-title fade-in">Hi! I am Abhijeet Reddy,</h1>
-      
-      <!-- Tagline -->
-      <p class="hero-tagline fade-in">AI🤖 & Data-Science📊 Enthusiast | Full-Stack Developer🚀</p>
-  </div>
-</section>
+        <!-- Name -->
+        <h1 class="hero-title fade-in">Hi! I am Abhijeet Reddy,</h1>
 
-
-
-
-
-    <!-- About Me Section -->
-<section id="about-me-section" class="py-5">
-  <div class="container">
-    <!-- Section Title -->
-    <h2 class="text-center mb-4">About Me</h2>
-    
-    <div class="row align-items-center">
-      <!-- Image Column -->
-      <div class="col-md-6 text-center">
-        <img src="./assets/mission-page-img.jpg" alt="Abhijeet Reddy Pailla" class="mission-img">
+        <!-- Tagline -->
+        <p class="hero-tagline fade-in">AI🤖 & Data-Science📊 Enthusiast | Full-Stack Developer🚀</p>
       </div>
-      
-      <!-- Text Column -->
-      <div class="col-md-6">
-        <p class="mission-text">
-          I am Abhijeet Reddy Pailla, a dynamic and enthusiastic professional with a relentless passion for technology and innovation. As a skilled web developer and full-stack developer, I craft efficient, user-focused solutions using modern tools like HTML, CSS, JavaScript, React, Node.js, and Bootstrap. My deep curiosity drives me to excel in data science and AI, where I leverage Python, TensorFlow, and advanced analytics to build impactful models and solutions. A fast learner with strong leadership qualities, I thrive on tackling challenges and continuously exploring new technologies to stay at the forefront of the industry. Whether it’s coding a seamless application or diving into cutting-edge AI research, I’m committed to creating value and pushing boundaries.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
     <!-- Skills Section -->
-<!-- Skills Section -->
-<!-- Skills Section -->
-<!-- Skills Section -->
-<section id="skills-section" class="py-5">
-  <div class="container">
-    <!-- Section Title -->
-    <h2 class="text-center mb-4">Skills</h2>
-    
-    <!-- Skills Grid -->
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-      <!-- Skill 1 (Add goofy-bounce) -->
-      <div class="col">
-        <div class="card h-100 text-center skill-card goofy-bounce" style="animation-delay: 0.2s;">
-          <div class="card-body">
-            <i class="bi bi-code-slash fs-1 text-primary mb-3"></i>
-            <h5 class="card-title">Full-Stack Development</h5>
-            <p class="card-text">HTML, CSS, Bootstrap, JavaScript, Node.js, and React.</p>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Skill 2 (Add goofy-bounce) -->
-      <div class="col">
-        <div class="card h-100 text-center skill-card goofy-bounce" style="animation-delay: 0.4s;">
-          <div class="card-body">
-            <i class="bi bi-database-fill-gear fs-1 text-primary mb-3"></i>
-            <h5 class="card-title">Data Science & Databases</h5>
-            <p class="card-text">Pandas, Tableau, MySQL, PostgreSQL, Firebase (NoSQL), Data Analytics</p>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Skill 3 (Add goofy-bounce) -->
-      <div class="col">
-        <div class="card h-100 text-center skill-card goofy-bounce" style="animation-delay: 0.6s;">
-          <div class="card-body">
-            <i class="bi bi-robot fs-1 text-primary mb-3"></i>
-            <h5 class="card-title">AI & Machine Learning</h5>
-            <p class="card-text">Experience with Python, TensorFlow, and building predictive models.</p>
-          </div>
-        </div>
-      </div>
+    <section id="skills-section" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Skills</h2>
 
-      <!-- Skill 5: Cloud (Add goofy-bounce) -->
-      <div class="col">
-        <div class="card h-100 text-center skill-card goofy-bounce" style="animation-delay: 0.8s;">
-          <div class="card-body">
-            <i class="bi bi-cloud fs-1 text-primary mb-3"></i>
-            <h5 class="card-title">Cloud</h5>
-            <p class="card-text">AWS, Azure, DevOps, Data Management & Analytics in Cloud</p>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card h-100 text-center skill-card goofy-bounce" style="animation-delay: 0.2s;">
+              <div class="card-body">
+                <i class="bi bi-code-slash fs-1 text-primary mb-3"></i>
+                <h5 class="card-title">Full-Stack Development</h5>
+                <p class="card-text">HTML, CSS, Bootstrap, JavaScript, Node.js, and React.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100 text-center skill-card goofy-bounce" style="animation-delay: 0.4s;">
+              <div class="card-body">
+                <i class="bi bi-database-fill-gear fs-1 text-primary mb-3"></i>
+                <h5 class="card-title">Data Science & Databases</h5>
+                <p class="card-text">Pandas, Tableau, MySQL, PostgreSQL, Firebase (NoSQL), Data Analytics</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100 text-center skill-card goofy-bounce" style="animation-delay: 0.6s;">
+              <div class="card-body">
+                <i class="bi bi-robot fs-1 text-primary mb-3"></i>
+                <h5 class="card-title">AI & Machine Learning</h5>
+                <p class="card-text">Experience with Python, TensorFlow, and building predictive models.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100 text-center skill-card goofy-bounce" style="animation-delay: 0.8s;">
+              <div class="card-body">
+                <i class="bi bi-cloud fs-1 text-primary mb-3"></i>
+                <h5 class="card-title">Cloud</h5>
+                <p class="card-text">AWS, Azure, DevOps, Data Management & Analytics in Cloud</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100 text-center skill-card goofy-bounce" style="animation-delay: 1.0s;">
+              <div class="card-body">
+                <i class="bi bi-boxes fs-1 text-primary mb-3"></i>
+                <h5 class="card-title">Frameworks</h5>
+                <p class="card-text">Bootstrap, React, Node.js, Ruby on Rails, Flask, FastAPI</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100 text-center skill-card goofy-bounce" style="animation-delay: 1.2s;">
+              <div class="card-body">
+                <i class="bi bi-book fs-1 text-primary mb-3"></i>
+                <h5 class="card-title">Coursework</h5>
+                <p class="card-text">OOP, DSA, OS, DBMS, WebDev, Cyber Security</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tech-icons-container mt-5">
+          <div class="tech-icons-scroll">
+            <img src="./assets/html-5_5968267.png" alt="HTML" class="tech-icon" />
+            <img src="./assets/css-3_732190.png" alt="CSS" class="tech-icon" />
+            <img src="./assets/js_5968292.png" alt="JavaScript" class="tech-icon" />
+            <img src="https://devicon-website.vercel.app/api/python/original.svg" alt="Python" class="tech-icon" />
+            <img src="https://devicon-website.vercel.app/api/java/original.svg" alt="Java" class="tech-icon" />
+            <img src="./assets/icons8-c++-48.png" alt="C++" class="tech-icon" />
+            <img src="./assets/physics_753244.png" alt="React" class="tech-icon" />
+            <img src="./assets/nodejs.256x157.png" alt="Node.js" class="tech-icon" />
+            <img src="./assets/rubyrails.png" alt="RubyonRails" class="tech-icon" />
+            <img src="./assets/next.js" alt="Next.js" class="tech-icon" />
+            <img src="./assets/mysql_919836.png" alt="MySQL" class="tech-icon" />
+            <img src="./assets/icons8-linux-48.png" alt="Linux" class="tech-icon" />
+            <img src="./assets/githubwhite.jpeg" alt="Git" class="tech-icon" />
+            <img src="./assets/visual-studio_906324.png" alt="VScode" class="tech-icon" />
+            <img src="https://devicon-website.vercel.app/api/amazonwebservices/original.svg" alt="AWS" class="tech-icon" />
+            <img src="https://devicon-website.vercel.app/api/bootstrap/original.svg" alt="Bootstrap" class="tech-icon" />
+            <!-- Duplicate icons intentionally kept if you rely on the scrolling effect -->
+            <img src="./assets/html-5_5968267.png" alt="HTML" class="tech-icon" />
+            <img src="./assets/css-3_732190.png" alt="CSS" class="tech-icon" />
+            <img src="./assets/js_5968292.png" alt="JavaScript" class="tech-icon" />
+            <img src="https://devicon-website.vercel.app/api/python/original.svg" alt="Python" class="tech-icon" />
+            <img src="https://devicon-website.vercel.app/api/java/original.svg" alt="Java" class="tech-icon" />
+            <img src="./assets/icons8-c++-48.png" alt="C++" class="tech-icon" />
+            <img src="./assets/physics_753244.png" alt="React" class="tech-icon" />
+            <img src="./assets/nodejs.256x157.png" alt="Node.js" class="tech-icon" />
+            <img src="./assets/rubyrails.png" alt="RubyonRails" class="tech-icon" />
+            <img src="./assets/next.js" alt="Next.js" class="tech-icon" />
+            <img src="./assets/mysql_919836.png" alt="MySQL" class="tech-icon" />
+            <img src="./assets/icons8-linux-48.png" alt="Linux" class="tech-icon" />
+            <img src="./assets/githubwhite.jpeg" alt="Git" class="tech-icon" />
+            <img src="./assets/visual-studio_906324.png" alt="VScode" class="tech-icon" />
+            <img src="https://devicon-website.vercel.app/api/amazonwebservices/original.svg" alt="AWS" class="tech-icon" />
+            <img src="https://devicon-website.vercel.app/api/bootstrap/original.svg" alt="Bootstrap" class="tech-icon" />
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="col">
-        <div class="card h-100 text-center skill-card goofy-bounce" style="animation-delay: 1.0s;">
-          <div class="card-body">
-            <i class="bi bi-boxes fs-1 text-primary mb-3"></i>
-            <h5 class="card-title">Frameworks</h5>
-            <p class="card-text">Bootstrap, React, Node.js, Ruby on Rails, Flask, FastAPI</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="card h-100 text-center skill-card goofy-bounce" style="animation-delay: 1.2s;">
-          <div class="card-body">
-            <i class="bi bi-book fs-1 text-primary mb-3"></i>
-            <h5 class="card-title">Coursework</h5>
-            <p class="card-text">OOP, DSA, OS, DBMS, WebDev, Cyber Security</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- New Section for Technology Icons -->
-    <div class="tech-icons-container mt-5">
-    
-      <div class="tech-icons-scroll">
-        <img src="./assets/html-5_5968267.png" alt="HTML" class="tech-icon">
-        <img src="./assets/css-3_732190.png" alt="CSS" class="tech-icon">
-        <img src="./assets/js_5968292.png" alt="JavaScript" class="tech-icon">
-        <img src="https://devicon-website.vercel.app/api/python/original.svg" alt="Python" class="tech-icon">
-        <img src="https://devicon-website.vercel.app/api/java/original.svg" alt="Java" class="tech-icon">
-        <img src="./assets/icons8-c++-48.png" alt="C++" class="tech-icon">
-        <img src="./assets/physics_753244.png " alt="React" class="tech-icon">
-        <img src="./assets/nodejs.256x157.png" alt="Node.js" class="tech-icon">
-        <img src="./assets/rubyrails.png" alt="RubyonRails" class="tech-icon">
-        <img src="./assets/next.js" alt="Next.js" class="tech-icon">
-        <img src="./assets/mysql_919836.png" alt="MySQL" class="tech-icon">
-        <img src="./assets/icons8-linux-48.png" alt="Linux" class="tech-icon">
-        <img src="./assets/githubwhite.jpeg" alt="Git" class="tech-icon">
-        <img src="./assets/visual-studio_906324.png" alt="VScode" class="tech-icon">
-        <img src="https://devicon-website.vercel.app/api/amazonwebservices/original.svg" alt="AWS" class="tech-icon"></img>
-        <img src="https://devicon-website.vercel.app/api/bootstrap/original.svg" alt="Bootstrap" class="tech-icon"></img> 
-        <img src="./assets/html-5_5968267.png" alt="HTML" class="tech-icon">
-        <img src="./assets/css-3_732190.png" alt="CSS" class="tech-icon">
-        <img src="./assets/js_5968292.png" alt="JavaScript" class="tech-icon">
-        <img src="https://devicon-website.vercel.app/api/python/original.svg" alt="Python" class="tech-icon">
-        <img src="https://devicon-website.vercel.app/api/java/original.svg" alt="Java" class="tech-icon">
-        <img src="./assets/icons8-c++-48.png" alt="C++" class="tech-icon">
-        <img src="./assets/physics_753244.png " alt="React" class="tech-icon">
-        <img src="./assets/nodejs.256x157.png" alt="Node.js" class="tech-icon">
-        <img src="./assets/rubyrails.png" alt="RubyonRails" class="tech-icon">
-        <img src="./assets/next.js" alt="Next.js" class="tech-icon">
-        <img src="./assets/mysql_919836.png" alt="MySQL" class="tech-icon">
-        <img src="./assets/icons8-linux-48.png" alt="Linux" class="tech-icon">
-        <img src="./assets/githubwhite.jpeg" alt="Git" class="tech-icon">
-        <img src="./assets/visual-studio_906324.png" alt="VScode" class="tech-icon">
-        <img src="https://devicon-website.vercel.app/api/amazonwebservices/original.svg" alt="AWS" class="tech-icon"></img>
-        <img src="https://devicon-website.vercel.app/api/bootstrap/original.svg" alt="Bootstrap" class="tech-icon"></img>       
-      </div>
-    </div>
-  </div>
-</section>
-
-    <!-- Skills section -->
     <!-- Projects Section -->
-<!-- Projects Section -->
-<section id="projects-section" class="py-5">
-  <div class="container">
-    <!-- Section Title (Remove goofy-bounce) -->
-    <h2 class="text-center mb-4 project-title">Projects</h2>
-    
-    <!-- Projects in Zigzag Pattern (Vertical, Alternating Left-Right) -->
-    <div class="project-zigzag">
-      <!-- Project 1 (Left, Flip on Load, Remove goofy-bounce) -->
-      <div class="project-card-wrapper left-align flip-card" style="animation-delay: 0.2s;">
-        <div class="card h-100 project-card">
-          <div class="card-body text-center">
-            <h5 class="card-title">Project 1</h5>
-            <p class="card-text">Add your project description here. Include details, technologies used, and a link if applicable.</p>
-          </div>
-        </div>
-      </div>
+    <section id="projects-section" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-4 project-title">Projects</h2>
 
-      <!-- Project 2 (Right, Flip on Load) -->
-      <div class="project-card-wrapper right-align flip-card" style="animation-delay: 0.4s;">
-        <div class="card h-100 project-card">
-          <div class="card-body text-center">
-            <h5 class="card-title">Project 2</h5>
-            <p class="card-text">Add your project description here. Include details, technologies used, and a link if applicable.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 3 (Left, Flip on Load) -->
-      <div class="project-card-wrapper left-align flip-card" style="animation-delay: 0.6s;">
-        <div class="card h-100 project-card">
-          <div class="card-body text-center">
-            <h5 class="card-title">Project 3</h5>
-            <p class="card-text">Add your project description here. Include details, technologies used, and a link if applicable.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Featured Projects Showcase Section -->
-<section id="featured-projects-section" class="py-5">
-  <div class="container">
-    <!-- Section Title -->
-    <h2 class="text-center mb-4">Featured Projects</h2>
-    
-    <!-- Bootstrap Carousel -->
-    <div id="projectsCarousel" class="carousel slide" data-bs-ride="carousel">
-      <!-- Indicators -->
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Project 1"></button>
-        <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="1" aria-label="Project 2"></button>
-        <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="2" aria-label="Project 3"></button>
-      </div>
-
-      <!-- Carousel Inner -->
-      <div class="carousel-inner">
-        <!-- Slide 1: Project 1 -->
-        <div class="carousel-item active">
-          <img src="./assests/project1.jpg" class="d-block w-100 carousel-img" alt="Project 1">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>AI-Powered Recommendation System</h5>
-            <p>Built a machine learning model using Python and TensorFlow to recommend personalized content, deployed on AWS with a React frontend.</p>
-          </div>
-        </div>
-
-        <!-- Slide 2: Project 2 -->
-        <div class="carousel-item">
-          <img src="./assests/project2.jpg" class="d-block w-100 carousel-img" alt="Project 2">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Full-Stack E-Commerce Platform</h5>
-            <p>Developed a responsive e-commerce site with Node.js, React, and MongoDB, featuring real-time analytics and secure payments.</p>
-          </div>
-        </div>
-
-        <!-- Slide 3: Project 3 -->
-        <div class="carousel-item">
-          <img src="./assests/project3.jpg" class="d-block w-100 carousel-img" alt="Project 3">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Data Visualization Dashboard</h5>
-            <p>Created an interactive dashboard using Tableau and Python for data analysis, integrated with a Bootstrap frontend for accessibility.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Controls -->
-      <button class="carousel-control-prev" type="button" data-bs-target="#projectsCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#projectsCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-  </div>
-</section>
-
-<!-- Contact Section -->
-<section id="contact-section" class="py-5">
-  <div class="container">
-    <!-- Section Title -->
-    <h2 class="text-center mb-4">Contact Me</h2>
-    <div class="d-flex justify-content-center gap-3 mb-4">
-      <a href="https://www.instagram.com/abhijeet_1591/" target="_blank" aria-label="Instagram">
-        <i class="bi bi-instagram fs-4 text-fdf0d5"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/abhijeetp15/" target="_blank" aria-label="LinkedIn">
-        <i class="bi bi-linkedin fs-4 text-fdf0d5"></i>
-      </a>
-      <a href="https://github.com/abhijeet-reddy" target="_blank" aria-label="GitHub">
-        <i class="bi bi-github fs-4 text-fdf0d5"></i>
-      </a>
-    </div>
-    
-    <!-- Contact Form -->
-    <div class="row justify-content-center">
-      <div class="col-md-8 col-lg-6">
-        <div class="card contact-card">
-          <div class="card-body">
-            <p class="text-center mb-3">Feel free to reach out to me for collaborations, inquiries, or just to say hello!</p>
-            <form id="contact-form" action="https://formspree.io/f/your-form-endpoint" method="POST">
-              <div class="mb-3">
-                <input type="text" class="form-control" name="name" placeholder="Your Name" required />
+        <div class="project-zigzag">
+          <div class="project-card-wrapper left-align flip-card" style="animation-delay: 0.2s;">
+            <div class="card h-100 project-card">
+              <div class="card-body text-center">
+                <h5 class="card-title">Project 1</h5>
+                <p class="card-text">Add your project description here. Include details, technologies used, and a link if applicable.</p>
               </div>
-              <div class="mb-3">
-                <input type="email" class="form-control" name="email" placeholder="Your Email" required />
+            </div>
+          </div>
+
+          <div class="project-card-wrapper right-align flip-card" style="animation-delay: 0.4s;">
+            <div class="card h-100 project-card">
+              <div class="card-body text-center">
+                <h5 class="card-title">Project 2</h5>
+                <p class="card-text">Add your project description here. Include details, technologies used, and a link if applicable.</p>
               </div>
-              <div class="mb-3">
-                <textarea class="form-control" name="message" placeholder="Your Message" rows="4" required></textarea>
+            </div>
+          </div>
+
+          <div class="project-card-wrapper left-align flip-card" style="animation-delay: 0.6s;">
+            <div class="card h-100 project-card">
+              <div class="card-body text-center">
+                <h5 class="card-title">Project 3</h5>
+                <p class="card-text">Add your project description here. Include details, technologies used, and a link if applicable.</p>
               </div>
-              <button type="submit" class="btn btn-primary w-100">Send Message</button>
-            </form>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- Footer section -->
+    <!-- Featured Projects Showcase Section -->
+    <section id="featured-projects-section" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Featured Projects</h2>
 
+        <div id="projectsCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Project 1"></button>
+            <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="1" aria-label="Project 2"></button>
+            <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="2" aria-label="Project 3"></button>
+          </div>
 
-    <!-- Footer section -->
-    <!-- Footer section -->
-<section class="footer" id="footer-section">
-  <div class="d-flex flex-column flex-md-row align-items-center justify-content-center gap-3">
-    <p>© Abhijeet Reddy Pailla 2025</p>
-    
-  </div>
-</section>
-    
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./assests/project1.jpg" class="d-block w-100 carousel-img" alt="Project 1" />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>AI-Powered Recommendation System</h5>
+                <p>Built a machine learning model using Python and TensorFlow to recommend personalized content, deployed on AWS with a React frontend.</p>
+              </div>
+            </div>
 
-    <!-- 
-  		TODO: Paste Bootstrap JavaScript script tag from:
-      https://getbootstrap.com/
-  	-->
+            <div class="carousel-item">
+              <img src="./assests/project2.jpg" class="d-block w-100 carousel-img" alt="Project 2" />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Full-Stack E-Commerce Platform</h5>
+                <p>Developed a responsive e-commerce site with Node.js, React, and MongoDB, featuring real-time analytics and secure payments.</p>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img src="./assests/project3.jpg" class="d-block w-100 carousel-img" alt="Project 3" />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Data Visualization Dashboard</h5>
+                <p>Created an interactive dashboard using Tableau and Python for data analysis, integrated with a Bootstrap frontend for accessibility.</p>
+              </div>
+            </div>
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#projectsCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#projectsCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact-section" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Contact Me</h2>
+        <div class="d-flex justify-content-center gap-3 mb-4">
+          <a href="https://www.instagram.com/abhijeet_1591/" target="_blank" aria-label="Instagram">
+            <i class="bi bi-instagram fs-4 text-fdf0d5"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/abhijeetp15/" target="_blank" aria-label="LinkedIn">
+            <i class="bi bi-linkedin fs-4 text-fdf0d5"></i>
+          </a>
+          <a href="https://github.com/abhijeet-reddy" target="_blank" aria-label="GitHub">
+            <i class="bi bi-github fs-4 text-fdf0d5"></i>
+          </a>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-lg-6">
+            <div class="card contact-card">
+              <div class="card-body">
+                <p class="text-center mb-3">Feel free to reach out to me for collaborations, inquiries, or just to say hello!</p>
+                <form id="contact-form" action="https://formspree.io/f/your-form-endpoint" method="POST">
+                  <div class="mb-3">
+                    <input type="text" class="form-control" name="name" placeholder="Your Name" required />
+                  </div>
+                  <div class="mb-3">
+                    <input type="email" class="form-control" name="email" placeholder="Your Email" required />
+                  </div>
+                  <div class="mb-3">
+                    <textarea class="form-control" name="message" placeholder="Your Message" rows="4" required></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer" id="footer-section">
+      <div class="d-flex flex-column flex-md-row align-items-center justify-content-center gap-3">
+        <p>© Abhijeet Reddy Pailla 2025</p>
+      </div>
+    </section>
+
+    <!-- Bootstrap JavaScript (placed just before closing body) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
