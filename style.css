@@ -265,9 +265,9 @@ body {
 /*
 .project-card:hover {
   transform: rotateY(180deg) translateY(-10px); /* Flip to the back and lift slightly */
-/*box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}*/
-
+ /*box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+ 
 /* Contact Section Styles */
 #contact-section h2 {
   font-size: 2.5rem;
@@ -384,7 +384,10 @@ body {
   .contact-card {
     min-height: auto;
   }
-  
+  .contact-card .form-control,
+  .contact-card .btn-primary {
+    font-size: 0.9rem;
+  }
 }
 
 /* Footer */
@@ -654,70 +657,6 @@ body {
 /* Inspiration Section */
 /* ... (Keep all existing CSS above this point) ... */
 
-/* Work Experience Section Styles */
-/* Work Experience - paste into your style.css */
-#work-experience-section .row.g-4 {
-  display: block !important; /* undo earlier forced column layout */
-}
-
-/* Card look: make all text white */
-.work-card {
-  background-color: rgba(0,0,0,0.88) !important;
-  color: #ffffff !important;
-  border: none !important;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.65) !important;
-  border-radius: 12px !important;
-  padding: 30px 36px !important;
-  max-width: 60% !important;         /* constrained width for zigzag */
-}
-
-/* Full-width entries (e.g. col-md-12) should keep 100% width */
-#work-experience-section .row.g-4 > .col-md-12 .work-card,
-#work-experience-section .row.g-4 > .col-12 .work-card {
-  max-width: 100% !important;
-  margin: 0 !important;
-}
-
-/* Ensure titles & subtitles and all paragraph/list text are white */
-.work-card .card-title,
-.work-card .card-subtitle,
-.work-card p,
-.work-card p.text-muted,
-.work-card ul,
-.work-card li {
-  color: #ffffff !important;
-}
-
-/* Alternate card alignment (zigzag):
-   - odd children: card aligned to the left
-   - even children: card aligned to the right
-   This uses the column element order inside the .row.g-4 container.
-*/
-#work-experience-section .row.g-4 > .col:nth-child(2n+1) .work-card {
-  margin-right: auto !important;  /* push card to the left */
-  margin-left: 0 !important;
-}
-
-#work-experience-section .row.g-4 > .col:nth-child(2n) .work-card {
-  margin-left: auto !important;   /* push card to the right */
-  margin-right: 0 !important;
-}
-
-/* Small screens: stack vertically full width */
-@media (max-width: 768px) {
-  .work-card {
-    max-width: 100% !important;
-    padding: 22px !important;
-    margin: 0 0 20px 0 !important;
-  }
-
-  /* center any card for a cleaner mobile view */
-  #work-experience-section .row.g-4 > .col .work-card {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-  }
-}
-
 /* Featured Projects Section */
 #featured-projects-section {
   background: transparent !important;
@@ -760,6 +699,23 @@ body {
 .carousel-caption p {
   font-size: 1.2rem;
 }
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .carousel-img {
+    height: 300px; /* Adjust image height for mobile */
+  }
+
+  .carousel-caption h5 {
+    font-size: 1.5rem;
+  }
+
+  .carousel-caption p {
+    font-size: 1rem;
+  }
+}
+
+
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
