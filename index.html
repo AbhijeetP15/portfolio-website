@@ -69,7 +69,7 @@
         <h1 class="hero-title fade-in">Hi! I am Abhijeet Reddy,</h1>
         <p class="hero-tagline fade-in">AI/ML🤖 & Data📊 Enthusiast | Software Developer🚀</p>
         <p class="hero-summary mt-3">
-          Innovative Computer Science student with expertise in AI/ML, full-stack, and cloud technologies. Passionate about turning challenging problems into actionable, data-driven solutions.
+          Driven Computer Science student specializing in AI/ML, Data Science, Software Development, and Cloud Computing. Passionate in building intelligent systems, scalable applications, and end-to-end solutions using modern technologies. Working on applying machine learning, data-driven insights, and software engineering best practices to solve real-world problems and deliver measurable impact.
         </p>
       </div>
     </section>
@@ -228,7 +228,7 @@
                 <img src="./assets/Healthcare_img.jpeg" class="d-block w-100 carousel-img" alt="Project 1" />
                 <div class="carousel-caption d-none d-md-block">
                   <h5>Health Care Premium Prediction (ML project)</h5>
-                  <p>Developed an end-to-end ML pipeline for healthcare premium prediction using Linear Regression, Decision Trees, Random Forests, and XGBoost, with preprocessing, EDA, feature engineering and deployment.</p>
+                  <p>Developed an end-to-end ML pipeline for healthcare premium prediction using Linear Regression, Decision Trees, Random Forests, and XGBoost, with preprocessing, EDA, feature engine[...]
                 </div>
               </a>
             </div>
@@ -238,7 +238,7 @@
                 <img src="./assets/h2_img.jpeg" class="d-block w-100 carousel-img" alt="Project 2" />
                 <div class="carousel-caption d-none d-md-block">
                   <h5>Credit Risk Prediction (ML Project)</h5>
-                  <p>Developed a machine learning pipeline for credit risk assessment using Logistic Regression, Random Forest, and XGBoost, with data preprocessing, feature engineering, SMOTE for class balancing and evaluation.</p>
+                  <p>Developed a machine learning pipeline for credit risk assessment using Logistic Regression, Random Forest, and XGBoost, with data preprocessing, feature engineering, SMOTE for cla[...]
                 </div>
               </a>
             </div>
@@ -248,7 +248,7 @@
                 <img src="./assets/ProEdge_image.jpeg" class="d-block w-100 carousel-img" alt="Project 3" />
                 <div class="carousel-caption d-none d-md-block">
                   <h5>ProEdge Resume Analyzer (AI Project)</h5>
-                  <p>Built an AI-powered application for resume analysis and LinkedIn profile photo evaluation using LangChain, OpenAI GPT models, and Streamlit, providing structured feedback and actionable suggestions.</p>
+                  <p>Built an AI-powered application for resume analysis and LinkedIn profile photo evaluation using LangChain, OpenAI GPT models, and Streamlit, providing structured feedback and acti[...]
                 </div>
               </a>
             </div>
@@ -287,12 +287,27 @@
             <div class="card contact-card">
               <div class="card-body">
                 <p class="text-center mb-3">Feel free to reach out to me for collaborations, inquiries, or just to say hello!</p>
-                <form id="contact-form" action="https://formspree.io/f/your-form-endpoint" method="POST">
-                  <div class="mb-3"><input type="text" class="form-control" name="name" placeholder="Your Name" required /></div>
-                  <div class="mb-3"><input type="email" class="form-control" name="email" placeholder="Your Email" required /></div>
-                  <div class="mb-3"><textarea class="form-control" name="message" placeholder="Your Message" rows="4" required></textarea></div>
+
+                <!-- IMPORTANT: Replace YOUR_FORM_ID below with the actual Formspree form id (or full /f/ URL) -->
+                <form id="contact-form" action="https://formspree.io/f/mwpnjokr" method="POST">
+                  <!-- Formspree expects the submitter email in _replyto -->
+                  <input type="hidden" name="_subject" value="Portfolio Contact Form Submission" />
+                  <input type="hidden" name="_captcha" value="false" />
+                  <div class="mb-3">
+                    <input type="text" class="form-control" name="name" placeholder="Your Name" required />
+                  </div>
+                  <div class="mb-3">
+                    <input type="email" class="form-control" name="_replyto" placeholder="Your Email" required />
+                  </div>
+                  <div class="mb-3">
+                    <textarea class="form-control" name="message" placeholder="Your Message" rows="4" required></textarea>
+                  </div>
                   <button type="submit" class="btn btn-primary w-100">Send Message</button>
+
+                  <!-- Status messages will appear here -->
+                  <div id="form-status" class="mt-3" aria-live="polite"></div>
                 </form>
+
               </div>
             </div>
           </div>
@@ -309,5 +324,43 @@
 
     <!-- Bootstrap JavaScript (placed just before closing body) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Contact form JS: submits via fetch and shows success / error messages -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const form = document.getElementById('contact-form');
+        const status = document.getElementById('form-status');
+
+        form.addEventListener('submit', async function (e) {
+          e.preventDefault();
+          status.innerHTML = '';
+
+          const formData = new FormData(form);
+          const action = form.action;
+
+          try {
+            const response = await fetch(action, {
+              method: form.method,
+              body: formData,
+              headers: {
+                'Accept': 'application/json'
+              }
+            });
+
+            if (response.ok) {
+              status.innerHTML = '<div class="alert alert-success">Thanks! Your message has been sent.</div>';
+              form.reset();
+            } else {
+              // Try to surface server-provided error details
+              const data = await response.json().catch(() => null);
+              const message = (data && data.error) ? data.error : 'There was a problem sending your message.';
+              status.innerHTML = '<div class="alert alert-danger">' + message + '</div>';
+            }
+          } catch (err) {
+            status.innerHTML = '<div class="alert alert-danger">Network error. Please try again later.</div>';
+          }
+        });
+      });
+    </script>
   </body>
 </html>
