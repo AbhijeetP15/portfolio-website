@@ -740,4 +740,26 @@ body {
 }
 .carousel-item { position: relative; }
 
+/* Consistent height for the whole carousel */
+#projectsCarousel,
+#projectsCarousel .carousel-inner,
+#projectsCarousel .carousel-item {
+  height: 60vh;
+}
+
+@media (min-width: 992px) {
+  #projectsCarousel,
+  #projectsCarousel .carousel-inner,
+  #projectsCarousel .carousel-item {
+    height: 70vh; /* taller on desktop */
+  }
+}
+
+/* Make images fill without distortion */
+.carousel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
