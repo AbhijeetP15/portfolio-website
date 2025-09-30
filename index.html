@@ -216,55 +216,70 @@
         <h2 class="text-center mb-4">Projects</h2>
 
         <div id="projectsCarousel" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Project 1"></button>
-            <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="1" aria-label="Project 2"></button>
-            <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="2" aria-label="Project 3"></button>
-          </div>
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Project 1"></button>
+    <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="1" aria-label="Project 2"></button>
+    <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="2" aria-label="Project 3"></button>
+    <!-- NEW indicator for Project 4 -->
+    <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="3" aria-label="Project 4"></button>
+  </div>
 
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <a href="https://healthcare-premium-prediction-ml-project-abhijeet.streamlit.app/" target="_blank" style="color: white; text-decoration: none;">
-                <img src="./assets/Healthcare_img.jpeg" class="d-block w-100 carousel-img" alt="Project 1" />
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>Health Care Premium Prediction (ML project)</h5>
-                  <p>Developed an end-to-end ML pipeline for healthcare premium prediction using Linear Regression, Decision Trees, Random Forests, and XGBoost, with preprocessing, EDA, feature engine[...]
-                </div>
-              </a>
-            </div>
-
-            <div class="carousel-item">
-              <a href="https://credit-risk-model-classification-project-ml.streamlit.app/" target="_blank" style="color: white; text-decoration: none;">
-                <img src="./assets/h2_img.jpeg" class="d-block w-100 carousel-img" alt="Project 2" />
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>Credit Risk Prediction (ML Project)</h5>
-                  <p>Developed a machine learning pipeline for credit risk assessment using Logistic Regression, Random Forest, and XGBoost, with data preprocessing, feature engineering, SMOTE for cla[...]
-                </div>
-              </a>
-            </div>
-
-            <div class="carousel-item">
-              <a href="https://proedge.streamlit.app/" target="_blank" style="color: white; text-decoration: none;">
-                <img src="./assets/ProEdge_image.jpeg" class="d-block w-100 carousel-img" alt="Project 3" />
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>ProEdge Resume Analyzer (AI Project)</h5>
-                  <p>Built an AI-powered application for resume analysis and LinkedIn profile photo evaluation using LangChain, OpenAI GPT models, and Streamlit, providing structured feedback and acti[...]
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <button class="carousel-control-prev" type="button" data-bs-target="#projectsCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#projectsCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
+  <div class="carousel-inner">
+    <!-- Project 1 (unchanged) -->
+    <div class="carousel-item active">
+      <a href="https://healthcare-premium-prediction-ml-project-abhijeet.streamlit.app/" target="_blank" style="color: white; text-decoration: none;">
+        <img src="./assets/Healthcare_img.jpeg" class="d-block w-100 carousel-img" alt="Project 1" />
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Health Care Premium Prediction (ML project)</h5>
+          <p>Developed an end-to-end ML pipeline for healthcare premium prediction using Linear Regression, Decision Trees, Random Forests, and XGBoost, with preprocessing, EDA, feature engine[...]</p>
         </div>
-      </div>
-    </section>
+      </a>
+    </div>
+
+    <!-- Project 2 (unchanged) -->
+    <div class="carousel-item">
+      <a href="https://credit-risk-model-classification-project-ml.streamlit.app/" target="_blank" style="color: white; text-decoration: none;">
+        <img src="./assets/h2_img.jpeg" class="d-block w-100 carousel-img" alt="Project 2" />
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Credit Risk Prediction (ML Project)</h5>
+          <p>Developed a machine learning pipeline for credit risk assessment using Logistic Regression, Random Forest, and XGBoost, with data preprocessing, feature engineering, SMOTE for cla[...]</p>
+        </div>
+      </a>
+    </div>
+
+    <!-- Project 3 (unchanged) -->
+    <div class="carousel-item">
+      <a href="https://proedge.streamlit.app/" target="_blank" style="color: white; text-decoration: none;">
+        <img src="./assets/ProEdge_image.jpeg" class="d-block w-100 carousel-img" alt="Project 3" />
+        <div class="carousel-caption d-none d-md-block">
+          <h5>ProEdge Resume Analyzer (AI Project)</h5>
+          <p>Built an AI-powered application for resume analysis and LinkedIn profile photo evaluation using LangChain, OpenAI GPT models, and Streamlit, providing structured feedback and acti[...]</p>
+        </div>
+      </a>
+    </div>
+
+    <!-- NEW Project 4 -->
+    <div class="carousel-item">
+      <a href="https://ui-intern-dash.vercel.app/" target="_blank" style="color: white; text-decoration: none;">
+        <img src="./assets/ui_intern_dash.jpeg" class="d-block w-100 carousel-img" alt="Student Dashboard UI/UX Project" />
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Student Dashboard (UI/UX Project)</h5>
+          <p>React-based student dashboard focused on clean UX, accessibility (aria-live, keyboard nav), and modular components (Card, ProgressBar, Chips, Activity).</p>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#projectsCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#projectsCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
 
     <!-- Contact Section -->
     <section id="contact-section" class="py-5">
