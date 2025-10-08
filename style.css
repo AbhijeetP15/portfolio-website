@@ -1,765 +1,1034 @@
-/* Reset default body margins and padding */
-/* Reset default body margins and padding */
+/* ========================================
+   MODERN PORTFOLIO STYLES - 2025
+   ======================================== */
+
+/* ========================================
+   BASE & RESET
+   ======================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
-  min-height: 100vh; /* Ensure the body takes up at least the full viewport height */
-  background: url("./assets/backgroundimg.jpeg") no-repeat center top;
-  background-size: cover; /* Ensures the image covers the entire viewport without repeating */
-  background-attachment: fixed; /* Keeps the image fixed while scrolling (optional, for parallax effect) */
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: #0a0a0a;
+  color: #ffffff;
+  overflow-x: hidden;
+  position: relative;
 }
 
-/* Navbar */
-.navbar {
-  background-color: rgb(255, 255, 255) !important; /* Retain dark navbar */
-  padding: 10px;
+/* ========================================
+   ANIMATED BACKGROUND
+   ======================================== */
+.gradient-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, 
+    #0a0a0a 0%, 
+    #1a1a2e 25%, 
+    #16213e 50%, 
+    #0f3460 75%, 
+    #0a0a0a 100%
+  );
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  z-index: -2;
 }
 
-/* Navbar Links */
-.navbar-nav .nav-link {
-  color: black !important;
-  transition: 0.3s ease-in-out;
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-.hero-summary{
-  color: white;
-  font-size: 1.0rem;
-  font-style: italic;
-}
-
-.black-icon {
-  color: black !important; /* Use !important to override Bootstrap defaults */
-}
-
-.black-icon:hover {
-  color: cyan !important; /* Use !important to override Bootstrap defaults */
-}
-
-/* Hover Effect */
-.navbar-nav .nav-link:hover {
-  color: cyan !important;
-}
-
-/* Disabled Link */
-.navbar-nav .nav-link.disabled {
-  color: black !important;
-  opacity: 1 !important;
+/* Floating Particles */
+.particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
   pointer-events: none;
 }
 
-/* Navbar Toggle Icon (Hamburger) */
-.navbar-toggler {
-  border-color: #fdf0d5;
-}
-
-.navbar-toggler-icon {
-  filter: invert(1);
-}
-
-/* Remove ALL individual background images and overlays from sections */
-#hero-section,
-#skills-section,
-#projects-section,
-#contact-section,
-#mission-section,
-.footer {
-  background: transparent !important; /* Ensure no section-specific backgrounds or overlays */
-  padding: 60px 0; /* Retain padding for content spacing */
-  position: relative;
-}
-
-/* Remove or adjust overlays (if any exist) */
-#hero-section::before,
-#skills-section::before,
-#projects-section::before,
-#contact-section::before,
-#mission-section::before,
-.footer::before {
-  content: none !important; /* Remove all pseudo-element overlays */
-}
-
-/* Ensure content stays above the body background (no need for z-index on containers if no overlays) */
-#hero-section .container,
-#skills-section .container,
-#projects-section .container,
-#contact-section .container,
-#mission-section .container {
-  position: relative;
-  z-index: 2; /* Optional, only if you reintroduce an overlay later */
-}
-
-#hero-section {
-  padding: 150px 0; /* Increased padding to make it larger */
-  text-align: center;
-}
-
-/* Hero Section Styling */
-.hero-img {
-  width: 230px;
-  height: 230px;
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(43, 180, 255, 0.5);
   border-radius: 50%;
-  border: 4px solid black;
-  margin-bottom: 15px;
-  margin-top: 45px;
+  animation: float 20s infinite;
 }
 
-.hero-title {
-  color: rgb(29, 218, 243);
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 10px;
-  margin-top: 10px;
-  font-style: italic;
+.particle:nth-child(1) {
+  left: 10%;
+  top: 20%;
+  animation-delay: 0s;
+  animation-duration: 15s;
 }
 
-.hero-title:hover {
-  color: cyan; /* Hover effect for hero title */
-  transition: color 0.3s ease; /* Smooth transition for hover */
+.particle:nth-child(2) {
+  left: 80%;
+  top: 60%;
+  animation-delay: 3s;
+  animation-duration: 18s;
 }
 
-.hero-tagline {
-  color: white;
-  font-size: 1.5rem;
-  font-style: italic;
+.particle:nth-child(3) {
+  left: 50%;
+  top: 80%;
+  animation-delay: 6s;
+  animation-duration: 22s;
 }
 
-/* Skills Section Styles */
-#skills-section h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: rgb(21, 229, 236);
+.particle:nth-child(4) {
+  left: 30%;
+  top: 40%;
+  animation-delay: 9s;
+  animation-duration: 16s;
 }
 
-#skills-section h2:hover {
-  color: cyan; /* Hover effect for skills section title */
-  transition: color 0.3s ease; /* Smooth transition for hover */
+.particle:nth-child(5) {
+  left: 70%;
+  top: 30%;
+  animation-delay: 12s;
+  animation-duration: 20s;
 }
 
-.card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: none;
-  background-color: rgb(0, 0, 0); /* Slightly transparent white for readability */
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.card-body i {
-  color: #007bff;
-}
-
-.card-title {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 15px;
-  color: blue; /* Changed to blue as requested */
-}
-
-.card-text {
-  font-size: 1rem;
-  color: white; /* Changed to white as requested */
-}
-
-/* Apply goofy-bounce to skill cards (Ensure visibility) */
-.skill-card {
-  opacity: 1; /* Ensure cards are visible by default (remove initial hide if animation isn’t triggering) */
-  animation: bounce 2s ease-in-out infinite; /* Continuous bounce for skill cards */
-  transition: opacity 0.5s ease; /* Smooth opacity transition for visibility */
-}
-
-/* Projects Section Styles */
-#projects-section h2.project-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: rgb(29, 218, 243); /* Keep hero title color for projects */
-}
-
-#projects-section h2.project-title:hover {
-  color: cyan; /* Maintain hover effect */
-  transition: color 0.3s ease; /* Smooth transition for hover */
-}
-
-.project-zigzag {
-  display: flex;
-  flex-direction: column;
-  gap: 40px; /* Space between project cards */
-}
-
-.project-card-wrapper {
-  opacity: 0; /* Initially hidden for animation */
-  transition: opacity 0.5s ease; /* Smooth opacity transition */
-  perspective: 1000px; /* Enable 3D perspective for flip effect */
-}
-
-.left-align {
-  align-self: flex-start; /* Align to the left */
-  margin-right: auto; /* Push to the left */
-  max-width: 80%; /* Prevent overflow */
-}
-
-.right-align {
-  align-self: flex-end; /* Align to the right */
-  margin-left: auto; /* Push to the right */
-  max-width: 80%; /* Prevent overflow */
-}
-
-.project-card {
-  background-color: black; /* Keep black background */
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.6s ease, box-shadow 0.3s ease;
-  transform-style: preserve-3d; /* Enable 3D transforms for the card */
-  color: white; /* Ensure all text inside project cards is white */
-  padding: 20px; /* Ensure padding for better content spacing */
-}
-
-/* Ensure project card text (titles, descriptions) is white */
-.project-card .card-title,
-.project-card .card-text {
-  color: white; /* Override any previous text colors inside project cards */
-}
-
-/* New Minimal Bounce Animation for Project Cards (Different from Skills) */
-@keyframes subtleWiggle {
+@keyframes float {
   0%, 100% {
-    transform: translateY(0) rotate(0deg); /* Start and end at normal position */
-  }
-  25% {
-    transform: translateY(-5px) rotate(-2deg); /* Slight upward lift and minor left tilt */
-  }
-  75% {
-    transform: translateY(-5px) rotate(2deg); /* Slight upward lift and minor right tilt */
-  }
-}
-
-.project-card:hover {
-  animation: subtleWiggle 0.8s ease-in-out; /* Apply subtle wiggle on hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover for emphasis */
-  transform: translateY(-5px); /* Slight lift */
-}
-
-/* Card Flip Animation (On Load) - Keep existing */
-.flip-card {
-  animation: flipIn 1s ease-out forwards; /* Flip in on load */
-}
-
-@keyframes flipIn {
-  0% {
+    transform: translateY(0) translateX(0);
     opacity: 0;
-    transform: rotateY(-180deg); /* Start flipped backward */
+  }
+  10% {
+    opacity: 0.5;
   }
   50% {
+    transform: translateY(-80vh) translateX(20px);
+    opacity: 0.8;
+  }
+  90% {
     opacity: 0.5;
-    transform: rotateY(-90deg); /* Halfway through the flip */
-  }
-  100% {
-    opacity: 1;
-    transform: rotateY(0deg); /* End upright */
   }
 }
 
-/* Optional: Add Hover Flip for Interactivity (Uncomment if desired) */
-/*
-.project-card:hover {
-  transform: rotateY(180deg) translateY(-10px); /* Flip to the back and lift slightly */
-/*box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+/* ========================================
+   GLASSMORPHISM NAVBAR
+   ======================================== */
+.navbar {
+  background: rgba(10, 10, 10, 0.8) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(43, 180, 255, 0.1);
+  padding: 1rem 2rem;
+  transition: all 0.3s ease;
 }
 
-/* Contact Section Styles */
-#contact-section h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: rgb(29, 218, 243); /* Changed to match hero title color */
+.navbar-brand i {
+  color: #2bb4ff;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
 }
 
-#contact-section h2:hover {
-  color: cyan; /* Hover effect for contact section title */
-  transition: color 0.3s ease; /* Smooth transition for hover */
+.navbar-brand i:hover {
+  color: #00fff5;
+  transform: rotate(360deg);
 }
 
-#contact-section p {
-  color: white;
-}
-
-.contact-card {
-  background-color: transparent; /* Remove white background, make transparent */
+.navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.8) !important;
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem !important;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.contact-card .card-body {
-  padding: 20px;
-}
-
-.contact-card form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-#about-me-section {
-  background: transparent !important;
-  padding: 60px 0;
-}
-
-/* Match About Me Title with Hero Title */
-#about-me-section h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: rgb(21, 229, 236); /* Match mission section title color for consistency */
-}
-
-#about-me-section h2:hover {
-  color: cyan; /* Hover effect for about me section title */
-  transition: color 0.3s ease; /* Smooth transition for hover */
-}
-
-.mission-img {
-  width: 90%;
-  max-width: 500px;
-  border-radius: 10px;
-}
-
-.mission-text {
-  color: white;
-  font-size: 1.05rem; /* Reduced by 30% from 1.5rem */
-  font-style: italic;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .mission-img {
-    width: 100%;
-    max-width: 300px;
-    margin-bottom: 20px;
-  }
-}
-
-.contact-card .form-control {
-  border-radius: 4px;
-  border: 1px solid #ced4da;
-  padding: 10px;
-  font-size: 1rem;
-  background-color: rgba(255, 255, 255, 0.7); /* Slight transparent white for inputs to remain readable over background */
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.contact-card .form-control:focus {
-  border-color: #ae99df; /* Match title color for focus */
-  box-shadow: 0 0 5px rgba(174, 153, 223, 0.5);
-  outline: none;
-  background-color: rgba(255, 255, 255, 0.9); /* Slightly less transparency on focus for clarity */
-}
-
-.contact-card textarea.form-control {
-  resize: vertical; /* Allow vertical resizing only */
-  min-height: 100px; /* Ensure enough space for messages */
-}
-
-.contact-card .btn-primary {
-  background-color: #000000; /* Black submit button */
-  border-color: #000000; /* Black border to match */
-  font-weight: 600;
-  padding: 10px 20px;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
-}
-
-.contact-card .btn-primary:hover {
-  background-color: #333333; /* Darker black on hover */
-  border-color: #333333; /* Darker black border on hover */
-}
-
-.contact-card .btn-primary:focus {
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Black focus shadow */
-  outline: none;
-}
-
-@media (max-width: 768px) {
-  #contact-section {
-    padding: 40px 0;
-  }
-  .contact-card {
-    min-height: auto;
-  }
-  .contact-card .form-control,
-  .contact-card .btn-primary {
-    font-size: 0.9rem;
-  }
-}
-
-/* Footer */
-.footer {
-  background: transparent !important; /* Ensure footer uses body background */
-  color: #fdf0d5;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 60px;
-  width: 100%;
+  transition: all 0.3s ease;
   position: relative;
+  overflow: hidden;
+}
+
+.navbar-nav .nav-link::before {
+  content: '';
+  position: absolute;
   bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #2bb4ff, #00fff5);
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
 }
 
-.footer a {
-  color: #fdf0d5; /* Match text color for links */
-  text-decoration: none; /* Remove default underline */
-  transition: color 0.3s ease; /* Smooth color transition on hover */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #2bb4ff !important;
+  background: rgba(43, 180, 255, 0.1);
 }
 
-.footer a:hover {
-  color: #7209b7; /* Match navbar hover color for consistency */
-  text-decoration: none; /* Ensure no underline on hover */
+.navbar-nav .nav-link:hover::before,
+.navbar-nav .nav-link.active::before {
+  width: 80%;
 }
 
-.footer .bi {
-  font-size: 1.5rem; /* Slightly larger icons for visibility */
+/* ========================================
+   ENHANCED HERO SECTION
+   ======================================== */
+#home-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 0 80px;
+  position: relative;
 }
 
-.footer .d-flex {
-  gap: 1rem; /* Consistent spacing between icons on mobile and desktop */
+.hero-content {
+  text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
-@media (max-width: 768px) {
-  .footer {
-    height: auto; /* Adjust height for mobile to accommodate stacking */
-    padding: 15px 0; /* Add padding for better spacing on mobile */
-  }
-  .footer .d-flex {
-    flex-direction: column; /* Stack vertically on mobile */
-    gap: 0.5rem; /* Reduce gap on mobile for tighter spacing */
-  }
-  .footer .bi {
-    font-size: 1.25rem; /* Slightly smaller icons on mobile */
-  }
+/* Profile Image with Ring Animation */
+.profile-container {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2rem;
 }
 
-/* Responsive Adjustments for Hero */
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: 2rem;
-  }
-  .hero-tagline {
-    font-size: 1.2rem;
-  }
-  .hero-img {
-    width: 120px;
-    height: 120px;
-  }
-  body {
-    background-attachment: scroll; /* Disables parallax on mobile for better performance */
-  }
+.hero-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 4px solid #2bb4ff;
+  position: relative;
+  z-index: 2;
+  animation: profileFloat 3s ease-in-out infinite;
+  box-shadow: 0 0 40px rgba(43, 180, 255, 0.3);
 }
 
-/* Responsive Adjustments for Skills */
-@media (max-width: 768px) {
-  #skills-section {
-    padding: 40px 0;
-  }
-  .card {
-    min-height: auto;
-  }
+.profile-ring {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: calc(100% + 30px);
+  height: calc(100% + 30px);
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top-color: #2bb4ff;
+  border-right-color: #00fff5;
+  animation: ringRotate 3s linear infinite;
 }
 
-/* Responsive Adjustments for Projects (Zigzag) */
-@media (max-width: 768px) {
-  #projects-section {
-    padding: 40px 0;
-  }
-
-  #projects-section h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: rgb(21, 229, 236);
-  }
-
-  .project-zigzag {
-    gap: 30px; /* Reduce space between cards on mobile */
-  }
-  .left-align,
-  .right-align {
-    align-self: center; /* Center on mobile for simplicity */
-    margin: 0 auto; /* Center horizontally */
-    max-width: 100%; /* Full width on mobile */
-  }
-  .project-title {
-    font-size: 2rem;
-  }
-  .project-card {
-    min-height: auto;
-  }
+@keyframes profileFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
 
-/* Responsive Adjustments for Contact */
-@media (max-width: 768px) {
-  #contact-section {
-    padding: 40px 0;
-  }
-  .contact-card {
-    min-height: auto;
-  }
+@keyframes ringRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
-/* Animation for Hero Title and Tagline */
-.fade-in {
-  opacity: 0;
-  animation: fadeIn 1.5s ease-out forwards;
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(135deg, #2bb4ff, #00fff5, #2bb4ff);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientFlow 3s linear infinite;
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+@keyframes gradientFlow {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
 }
 
 .hero-title {
-  animation-delay: 0.3s;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+  animation: fadeInUp 0.8s ease-out;
 }
 
 .hero-tagline {
-  animation-delay: 0.6s;
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2rem;
+  animation: fadeInUp 0.8s ease-out 0.2s backwards;
 }
 
-/* Goofy Bounce Animation (Now for Skill Cards) */
-@keyframes bounce {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
+.hero-summary {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  animation: fadeInUp 0.8s ease-out 0.4s backwards;
+}
+
+/* Modern CTA Buttons */
+.hero-cta {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  animation: fadeInUp 0.8s ease-out 0.6s backwards;
+}
+
+.btn-modern {
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-primary-modern {
+  background: linear-gradient(135deg, #2bb4ff, #00fff5);
+  color: #0a0a0a;
+  box-shadow: 0 10px 30px rgba(43, 180, 255, 0.3);
+}
+
+.btn-primary-modern:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(43, 180, 255, 0.5);
+  color: #0a0a0a;
+}
+
+.btn-secondary-modern {
+  background: transparent;
+  color: #2bb4ff;
+  border: 2px solid #2bb4ff;
+}
+
+.btn-secondary-modern:hover {
+  background: rgba(43, 180, 255, 0.1);
+  transform: translateY(-3px);
+  color: #2bb4ff;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
     transform: translateY(0);
   }
-  40% {
-    transform: translateY(-15px);
-  }
-  60% {
-    transform: translateY(-10px);
-  }
 }
 
-/* Tech Icons Container */
-.tech-icons-container {
-  overflow: hidden; /* Hide overflow for smooth scrolling */
-  padding: 20px 0;
-  visibility: visible; /* Ensure container is visible on page load */
-  opacity: 0; /* Initially hidden for fade-in */
-  animation: fadeIn 1s ease-out forwards 0.5s; /* Fade in after a slight delay for better load timing */
-  position: relative; /* Ensure positioning for z-index and animation */
-  z-index: 1; /* Ensure above background if needed */
-}
-
-/* Ensure container is displayed immediately */
-.tech-icons-container .container {
-  display: block; /* Ensure container isn’t hidden or delayed */
-}
-
-.tech-icons-container h3 {
-  color: #ae99df; /* Match your title color */
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-
-.tech-icons-container h3:hover {
-  color: cyan; /* Hover effect for tech icons container title */
-  transition: color 0.3s ease; /* Smooth transition for hover */
-}
-
-/* Horizontal Scrolling Container */
-.tech-icons-scroll {
-  display: flex;
-  gap: 20px; /* Space between icons */
-  padding: 10px 0;
-  animation: scrollHorizontal 20s linear infinite; /* Animation for continuous scrolling, starts immediately */
-  white-space: nowrap; /* Prevent wrapping */
-  transform: translateX(0); /* Ensure starting position is at the beginning */
-  will-change: transform; /* Optimize animation performance */
-  animation-play-state: running; /* Ensure animation starts immediately and runs continuously */
-  animation-fill-mode: both; /* Maintain animation state at start and end */
-  position: relative; /* Ensure positioning for seamless looping */
-  z-index: 2; /* Ensure above container if needed */
-}
-
-/* Individual Tech Icon Styling */
-.tech-icon {
-  width: 70px; /* Adjust size as needed */
-  height: auto; /* Maintain aspect ratio */
-  opacity: 0.8; /* Slightly transparent for a subtle effect */
-  transition: opacity 0.3s ease, transform 0.1s ease; /* Faster hover effect for transform (100ms), opacity remains at 300ms */
-  border-radius: 15px; /* Make them rounder (increased from 8px) */
-}
-
-/* Hover Effect for Tech Icons */
-.tech-icon:hover {
-  opacity: 1; /* Full opacity on hover */
-  transform: scale(1.4); /* Increase enlargement to 40% (from 1.2 to 1.4) */
-}
-
-/* Animation for Horizontal Scrolling (Perfect Infinite Loop with Full Sequence) */
-@keyframes scrollHorizontal {
-  0% {
-    transform: translateX(0); /* Start from the left edge of the viewport (visible start) */
-  }
-  100% {
-    transform: translateX(calc(-100% - 20px)); /* End beyond left (accounting for content width and gap, ensuring AWS transitions to HTML, then full sequence) */
-  }
-}
-
-/* Ensure the container is wide enough to hold all icons */
-.tech-icons-scroll {
-  width: 100%; /* Full width of the container */
-  min-width: 0; /* Prevent shrinking */
-}
-
-/* Fade-in animation for container (to ensure it appears immediately) */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-/* Responsive Adjustments for Tech Icons */
-@media (max-width: 768px) {
-  .tech-icons-scroll {
-    gap: 15px; /* Reduce gap on mobile */
-  }
-
-  .tech-icon {
-    width: 50px; /* Smaller base size on mobile (from 40px to 50px) */
-    border-radius: 10px; /* Slightly smaller rounded corners on mobile */
-  }
-
-  .tech-icon:hover {
-    transform: scale(1.2); /* Slightly less enlargement on mobile to fit better (from 1.1 to 1.2) */
-  }
-
-  /* Adjust scrolling for mobile */
-  @keyframes scrollHorizontal {
-    0% {
-      transform: translateX(0); /* Start from the left edge of the viewport (visible start) */
-    }
-    100% {
-      transform: translateX(calc(-100% - 15px)); /* End beyond left, adjusted for mobile gap, ensuring seamless loop */
-    }
-  }
-}
-
-/* Inspiration Section */
-/* ... (Keep all existing CSS above this point) ... */
-
-/* Featured Projects Section */
-#featured-projects-section {
-  background: transparent !important;
-  padding: 80px 0; /* Match other sections for consistent spacing */
-}
-
-/* Match Featured Projects Title with Other Section Titles */
-#featured-projects-section h2 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  font-style: italic;
-  color: rgb(21, 229, 236); /* Match other section titles */
+/* ========================================
+   SECTION TITLES
+   ======================================== */
+.section-title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 800;
   text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
 }
 
-#featured-projects-section h2:hover {
-  color: cyan; /* Maintain hover effect */
-  transition: color 0.3s ease; /* Smooth transition for hover */
+.section-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #2bb4ff, #00fff5);
+  margin: 1rem auto 0;
+  border-radius: 2px;
 }
 
-/* Carousel Images */
-.carousel-img {
-  height: 500px; /* Set a fixed height */
-  object-fit: cover; /* Ensures images fit without distortion */
-  border-radius: 10px; /* Slight border radius for smooth edges */
+/* ========================================
+   GLASSMORPHISM CARDS
+   ======================================== */
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-/* Carousel Caption Styling */
-.carousel-caption {
-  background: rgba(0, 0, 0, 0.6); /* Dark overlay for readability */
-  padding: 15px;
-  border-radius: 8px;
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(43, 180, 255, 0.3);
+  transform: translateY(-10px);
+  box-shadow: 0 20px 60px rgba(43, 180, 255, 0.2);
 }
 
-.carousel-caption h5 {
-  font-size: 1.8rem;
-  font-weight: bold;
+/* ========================================
+   SKILLS SECTION
+   ======================================== */
+#skills-section {
+  padding: 100px 0;
 }
 
-.carousel-caption p {
+.skill-card {
+  height: 100%;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(43, 180, 255, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.skill-card:hover::before {
+  left: 100%;
+}
+
+.skill-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  background: linear-gradient(135deg, #2bb4ff, #00fff5);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  color: #0a0a0a;
+  transition: all 0.3s ease;
+}
+
+.skill-card:hover .skill-icon {
+  transform: rotateY(360deg);
+  box-shadow: 0 10px 30px rgba(43, 180, 255, 0.4);
+}
+
+.skill-card h5 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #2bb4ff;
+  margin-bottom: 1rem;
+}
+
+.skill-card p {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* ========================================
+   TIMELINE (WORK EXPERIENCE)
+   ======================================== */
+#projects-section {
+  padding: 100px 0;
+}
+
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, transparent, #2bb4ff, transparent);
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  margin-bottom: 3rem;
+  position: relative;
+  animation: fadeInTimeline 0.6s ease-out backwards;
+}
+
+.timeline-item:nth-child(1) { animation-delay: 0.2s; }
+.timeline-item:nth-child(2) { animation-delay: 0.4s; }
+.timeline-item:nth-child(3) { animation-delay: 0.6s; }
+
+@keyframes fadeInTimeline {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 30px;
+  width: 20px;
+  height: 20px;
+  background: #2bb4ff;
+  border: 4px solid #0a0a0a;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  box-shadow: 0 0 20px rgba(43, 180, 255, 0.5);
+}
+
+.timeline-content {
+  width: calc(50% - 40px);
+  position: relative;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+  margin-left: auto;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  margin-right: auto;
+}
+
+.timeline-date {
+  display: inline-block;
+  background: linear-gradient(135deg, #2bb4ff, #00fff5);
+  color: #0a0a0a;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.timeline-content h5 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2bb4ff;
+  margin-bottom: 0.5rem;
+}
+
+.role-tech {
+  color: #00fff5;
+  font-style: italic;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.timeline-content ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.timeline-content li {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 0.8rem;
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+.timeline-content li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: #2bb4ff;
   font-size: 1.2rem;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .carousel-img {
-    height: 300px; /* Adjust image height for mobile */
-  }
-
-  .carousel-caption h5 {
-    font-size: 1.5rem;
-  }
-
-  .carousel-caption p {
-    font-size: 1rem;
-  }
+/* ========================================
+   PROJECTS CAROUSEL
+   ======================================== */
+#featured-projects-section {
+  padding: 100px 0;
 }
 
-
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .carousel-img {
-    height: 300px; /* Adjust image height for mobile */
-  }
-
-  .carousel-caption h5 {
-    font-size: 1.5rem;
-  }
-
-  .carousel-caption p {
-    font-size: 1rem;
-  }
+#projectsCarousel {
+  margin-top: 3rem;
 }
 
-.carousel-item::before{
-  content:'';
-  position:absolute; inset:0;
-  background:linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.55));
-}
-.carousel-item { position: relative; }
-
-/* Consistent height for the whole carousel */
 #projectsCarousel,
 #projectsCarousel .carousel-inner,
 #projectsCarousel .carousel-item {
-  height: 60vh;
+  height: 70vh;
+  min-height: 500px;
 }
 
-@media (min-width: 992px) {
-  #projectsCarousel,
-  #projectsCarousel .carousel-inner,
-  #projectsCarousel .carousel-item {
-    height: 70vh; /* taller on desktop */
-  }
+.carousel-item {
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
 }
 
-/* Make images fill without distortion */
+.carousel-item a {
+  display: block;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+}
+
 .carousel-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
+  transition: transform 0.6s ease;
 }
 
+.carousel-item:hover .carousel-img {
+  transform: scale(1.1);
+}
+
+.carousel-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, 
+    rgba(10, 10, 10, 0.3) 0%, 
+    rgba(10, 10, 10, 0.7) 100%
+  );
+  z-index: 1;
+}
+
+.carousel-caption {
+  background: rgba(10, 10, 10, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 20px;
+  bottom: 3rem;
+  left: 3rem;
+  right: 3rem;
+  text-align: left;
+  z-index: 2;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.carousel-item.active .carousel-caption {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.carousel-caption h5 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #2bb4ff, #00fff5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.carousel-caption p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.project-badge {
+  display: inline-block;
+  background: rgba(43, 180, 255, 0.2);
+  color: #2bb4ff;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 1px solid rgba(43, 180, 255, 0.3);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 60px;
+  height: 60px;
+  background: rgba(43, 180, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background: rgba(43, 180, 255, 0.4);
+  opacity: 1;
+}
+
+.carousel-control-prev {
+  left: 2rem;
+}
+
+.carousel-control-next {
+  right: 2rem;
+}
+
+.carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.carousel-indicators button.active {
+  background: #2bb4ff;
+  border-color: #2bb4ff;
+  width: 40px;
+  border-radius: 6px;
+}
+
+/* ========================================
+   CONTACT SECTION
+   ======================================== */
+#contact-section {
+  padding: 100px 0;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.social-icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(43, 180, 255, 0.3);
+  color: #2bb4ff;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  background: linear-gradient(135deg, #2bb4ff, #00fff5);
+  color: #0a0a0a;
+  transform: translateY(-5px) rotate(360deg);
+  box-shadow: 0 10px 30px rgba(43, 180, 255, 0.4);
+}
+
+.contact-card {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-intro {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: #ffffff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.08);
+  border-color: #2bb4ff;
+  box-shadow: 0 0 20px rgba(43, 180, 255, 0.2);
+}
+
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.btn-submit {
+  width: 100%;
+  background: linear-gradient(135deg, #2bb4ff, #00fff5);
+  color: #0a0a0a;
+  border: none;
+  padding: 1.2rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.btn-submit:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(43, 180, 255, 0.4);
+}
+
+.btn-submit i {
+  transition: transform 0.3s ease;
+}
+
+.btn-submit:hover i {
+  transform: translateX(5px);
+}
+
+.form-status {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.alert {
+  padding: 1rem;
+  border-radius: 12px;
+  margin-top: 1rem;
+}
+
+.alert-success {
+  background: rgba(0, 255, 157, 0.1);
+  border: 1px solid rgba(0, 255, 157, 0.3);
+  color: #00ff9d;
+}
+
+.alert-danger {
+  background: rgba(255, 82, 82, 0.1);
+  border: 1px solid rgba(255, 82, 82, 0.3);
+  color: #ff5252;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+.footer {
+  padding: 2rem 0;
+  text-align: center;
+  background: rgba(10, 10, 10, 0.8);
+  border-top: 1px solid rgba(43, 180, 255, 0.1);
+}
+
+.footer p {
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+@media (max-width: 992px) {
+  /* Timeline to vertical on tablets */
+  .timeline::before {
+    left: 30px;
+  }
+  
+  .timeline-item::before {
+    left: 30px;
+  }
+  
+  .timeline-content {
+    width: calc(100% - 80px);
+    margin-left: 80px !important;
+  }
+  
+  .timeline-item:nth-child(even) .timeline-content {
+    margin-left: 80px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+  }
+  
+  #home-section {
+    padding: 100px 0 60px;
+  }
+  
+  .hero-img {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .hero-cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .btn-modern {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  #skills-section,
+  #projects-section,
+  #featured-projects-section,
+  #contact-section {
+    padding: 60px 0;
+  }
+  
+  #projectsCarousel,
+  #projectsCarousel .carousel-inner,
+  #projectsCarousel .carousel-item {
+    height: 50vh;
+    min-height: 400px;
+  }
+  
+  .carousel-caption {
+    padding: 1.5rem;
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+  }
+  
+  .carousel-caption h5 {
+    font-size: 1.5rem;
+  }
+  
+  .carousel-caption p {
+    font-size: 0.95rem;
+  }
+  
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .carousel-control-prev {
+    left: 1rem;
+  }
+  
+  .carousel-control-next {
+    right: 1rem;
+  }
+  
+  .timeline::before {
+    left: 20px;
+  }
+  
+  .timeline-item::before {
+    left: 20px;
+  }
+  
+  .timeline-content {
+    width: calc(100% - 60px);
+    margin-left: 60px !important;
+  }
+  
+  .social-links {
+    gap: 1.5rem;
+  }
+  
+  .social-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.8rem;
+  }
+  
+  .hero-tagline {
+    font-size: 1.1rem;
+  }
+  
+  .hero-summary {
+    font-size: 1rem;
+  }
+  
+  .skill-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+  }
+}
+
+/* ========================================
+   SCROLL ANIMATIONS
+   ======================================== */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========================================
+   CUSTOM SCROLLBAR
+   ======================================== */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #2bb4ff, #00fff5);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #00fff5, #2bb4ff);
+}
+
+/* ========================================
+   SELECTION STYLING
+   ======================================== */
+::selection {
+  background: rgba(43, 180, 255, 0.3);
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background: rgba(43, 180, 255, 0.3);
+  color: #ffffff;
+}
